@@ -104,6 +104,7 @@ class App(object):
         # photo.image = image #keep a reference!
         # frame.pack()
         # photo.pack()
+        pass
         
     def Iterate(self):
         if self.iteration <= (len(self.CRNs) - 1):
