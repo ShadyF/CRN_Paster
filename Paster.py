@@ -80,14 +80,7 @@ class App(object):
     def Guide(self):
         guide_window = Toplevel()
         
-        v ="""
-        1. Copy-Paste or manually input your required CRNs into the program's entry boxes.
-        (Keep in mind the CRN must not contain any spaces or characters, else they won't be accepted into the entry box)
-        2. Press the "Done" Button
-        3. Open BSS, highlight/press the first box in BSS
-        4. Press Shift (Either the left or the right one, both work)
-        5. All your CRNs should be pasted into BSS now, press Submit and pray you're not too late.
-        """
+        v ="""1. Copy-Paste or manually input your required CRNs into the program's entry boxes.\n(Keep in mind the CRN must not contain any spaces or characters, else they won't be accepted into the entry box)\n2. Press the "Done" Button\n3. Open BSS, highlight/press the FIRST entry box in BSS\n4. Press Shift (Either the left or the right one, both work)"""
         
         guide_text = Label(guide_window, text=v, justify=LEFT)
         guide_text.pack()
@@ -104,7 +97,12 @@ class App(object):
         # photo.image = image #keep a reference!
         # frame.pack()
         # photo.pack()
-        pass
+        about_window = Toplevel()
+        
+        v ="""Made by Shady Fanous\nshady-fanous@aucegypt.edu\nSource code at https://github.com/ShadyF/CRN_Paster\nthis tab needs to be redone"""
+        
+        about_text = Label(about_window, text=v, justify=LEFT)
+        about_text.pack()
         
     def Iterate(self):
         if self.iteration <= (len(self.CRNs) - 1):
@@ -136,5 +134,5 @@ class App(object):
                
 root = Tk()
 app = App(root)
-#root.iconbitmap('clip.ico')
+root.iconbitmap('clip.ico')
 root.mainloop()
