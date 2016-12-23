@@ -86,7 +86,7 @@ class App:
         guide_text.pack()
 
     def demo(self):
-        url = "Demo.html"
+        url = "demo.html"
         webbrowser.open(url, new=2)
 
     def about(self):
